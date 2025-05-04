@@ -2,291 +2,111 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Online Shopping — eCommerce Store</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: 'Arial', sans-serif;
-            background: #fff;
-            color: #333;
-            line-height: 1.6;
-        }
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 40px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-            background: #fff;
-        }
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
-            color: #1e1e1e;
-        }
-        nav ul {
-            display: flex;
-            gap: 20px;
-            list-style: none;
-        }
-        nav ul li a {
-            text-decoration: none;
-            color: #333;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-        nav ul li a:hover {
-            color: #007bff;
-        }
-
-        .hero {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 60px 40px;
-            background: #f9f9f9;
-            flex-wrap: wrap;
-        }
-        .hero-text {
-            max-width: 500px;
-        }
-        .hero-text h1 {
-            font-size: 48px;
-            margin-bottom: 20px;
-        }
-        .hero-text p {
-            margin-bottom: 30px;
-            font-size: 18px;
-        }
-        .hero-text button {
-            background: #007bff;
-            color: #fff;
-            border: none;
-            padding: 12px 24px;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background 0.3s ease;
-        }
-        .hero-text button:hover {
-            background: #0056b3;
-        }
-        .hero img {
-            width: 45%;
-            max-width: 500px;
-        }
-
-        .categories {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-            padding: 40px;
-        }
-        .category-card {
-            width: 200px;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-        }
-        .category-card:hover {
-            transform: translateY(-5px);
-        }
-        .category-card img {
-            width: 100%;
-            display: block;
-        }
-        .category-card p {
-            text-align: center;
-            padding: 10px;
-            font-weight: 500;
-        }
-
-        .products {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            padding: 40px;
-        }
-        .product-card {
-            border: 1px solid #eee;
-            border-radius: 8px;
-            overflow: hidden;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .product-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-        }
-        .product-card img {
-            width: 100%;
-            display: block;
-        }
-        .product-card .info {
-            padding: 15px;
-        }
-        .product-card .info h3 {
-            margin-bottom: 10px;
-            font-size: 18px;
-        }
-        .product-card .info p {
-            font-size: 16px;
-            color: #007bff;
-            font-weight: bold;
-        }
-
-        .newsletter {
-            background: #333;
-            color: #fff;
-            padding: 40px 20px;
-            text-align: center;
-        }
-        .newsletter h2 {
-            margin-bottom: 15px;
-            font-size: 24px;
-        }
-        .newsletter input {
-            padding: 10px;
-            width: 250px;
-            border: none;
-            border-radius: 4px;
-            margin-right: 10px;
-        }
-        .newsletter button {
-            padding: 10px 20px;
-            background: #007bff;
-            border: none;
-            color: #fff;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: background 0.3s ease;
-        }
-        .newsletter button:hover {
-            background: #0056b3;
-        }
-
-        footer {
-            background: #222;
-            color: #aaa;
-            text-align: center;
-            padding: 20px;
-            font-size: 14px;
-        }
-
-        @media (max-width: 768px) {
-            .hero {
-                flex-direction: column;
-                text-align: center;
-            }
-            .hero img {
-                width: 100%;
-                margin-top: 20px;
-            }
-            .hero-text h1 {
-                font-size: 36px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            header {
-                flex-direction: column;
-            }
-            nav ul {
-                flex-direction: column;
-                gap: 10px;
-            }
-            .hero-text h1 {
-                font-size: 28px;
-            }
-            .hero-text p {
-                font-size: 16px;
-            }
-            .newsletter input {
-                width: 100%;
-                margin: 10px 0;
-            }
-            .newsletter button {
-                width: 100%;
-            }
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fasco</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
+<!-- Header -->
 <header>
-    <div class="logo">ShopLogo</div>
+    <div class="logo">FASCO</div>
     <nav>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Shop</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
+        <a href="#">Home</a>
+        <a href="#">Shop</a>
+        <a href="#">Collection</a>
+        <a href="#">Pages</a>
     </nav>
+    <button class="login-btn">Login</button>
 </header>
 
+<!-- Hero Section -->
 <section class="hero">
-    <div class="hero-text">
-        <h1>Discover Your Style</h1>
-        <p>Shop the latest trends in fashion and accessories, delivered straight to your door.</p>
-        <button>Shop Now</button>
-    </div>
-    <img src="https://via.placeholder.com/500x400.png?text=Hero+Image" alt="Hero Banner">
+    <div class="hero-card"></div>
+    <div class="hero-card main"></div>
+    <div class="hero-card"></div>
 </section>
 
-<section class="categories">
-    <div class="category-card">
-        <img src="https://via.placeholder.com/200x150.png?text=Category+1" alt="Category">
-        <p>Men's Wear</p>
-    </div>
-    <div class="category-card">
-        <img src="https://via.placeholder.com/200x150.png?text=Category+2" alt="Category">
-        <p>Women's Wear</p>
-    </div>
-    <div class="category-card">
-        <img src="https://via.placeholder.com/200x150.png?text=Category+3" alt="Category">
-        <p>Accessories</p>
-    </div>
+<!-- Brands Section -->
+<section class="brands">
+    <img src="https://via.placeholder.com/100x30?text=CHANEL" alt="Brand 1">
+    <img src="https://via.placeholder.com/100x30?text=LouisVuitton" alt="Brand 2">
+    <img src="https://via.placeholder.com/100x30?text=PRADA" alt="Brand 3">
+    <img src="https://via.placeholder.com/100x30?text=CalvinKlein" alt="Brand 4">
+    <img src="https://via.placeholder.com/100x30?text=DENIM" alt="Brand 5">
 </section>
 
-<section class="products">
-    <div class="product-card">
-        <img src="https://via.placeholder.com/200x200.png?text=Product+1" alt="Product">
-        <div class="info">
-            <h3>Leather Jacket</h3>
-            <p>$120</p>
-        </div>
-    </div>
-    <div class="product-card">
-        <img src="https://via.placeholder.com/200x200.png?text=Product+2" alt="Product">
-        <div class="info">
-            <h3>Classic Sneakers</h3>
-            <p>$90</p>
-        </div>
-    </div>
-    <div class="product-card">
-        <img src="https://via.placeholder.com/200x200.png?text=Product+3" alt="Product">
-        <div class="info">
-            <h3>Smart Watch</h3>
-            <p>$150</p>
-        </div>
+<!-- Deals Of The Month -->
+<section class="deals">
+    <h2>Deals Of The Month</h2>
+    <p>Special limited-time offers! Don't miss out!</p>
+    <div class="timer" id="timer">
+        <div><span id="days">00</span><small>Days</small></div>
+        <div><span id="hours">00</span><small>Hours</small></div>
+        <div><span id="minutes">00</span><small>Minutes</small></div>
+        <div><span id="seconds">00</span><small>Seconds</small></div>
     </div>
 </section>
 
+<!-- New Arrivals -->
+<section class="new-arrivals">
+    <h2>New Arrivals</h2>
+    <div class="products">
+        <div class="product-card"></div>
+        <div class="product-card"></div>
+        <div class="product-card"></div>
+        <div class="product-card"></div>
+        <div class="product-card"></div>
+        <div class="product-card"></div>
+    </div>
+</section>
+
+<!-- Highlight Section -->
+<section class="highlight">
+    <div class="highlight-image"></div>
+    <div class="highlight-text">
+        <h2>Peaky Blinders</h2>
+        <p>Elegant urban fashion. Feel the street style.</p>
+        <button class="shop-btn">Shop Now</button>
+    </div>
+</section>
+
+<!-- Instagram Section -->
+<section class="instagram">
+    <h2>Follow Us On Instagram</h2>
+    <div class="instagram-gallery">
+        <div class="insta-photo"></div>
+        <div class="insta-photo"></div>
+        <div class="insta-photo"></div>
+        <div class="insta-photo"></div>
+        <div class="insta-photo"></div>
+        <div class="insta-photo"></div>
+    </div>
+</section>
+
+<!-- Testimonials -->
+<section class="testimonials">
+    <h2>This Is What Our Customers Say</h2>
+    <div class="testimonial-slider">
+        <div class="testimonial">
+            <p>"Super comfortable clothing, perfect fit!"</p>
+            <span>– James K.</span>
+        </div>
+    </div>
+</section>
+
+<!-- Newsletter -->
 <section class="newsletter">
-    <h2>Stay Updated!</h2>
+    <h2>Subscribe To Our Newsletter</h2>
     <input type="email" placeholder="Enter your email">
-    <button>Subscribe</button>
+    <button class="subscribe-btn">Subscribe</button>
 </section>
 
+<!-- Footer -->
 <footer>
-    © 2025 eCommerce Store — All rights reserved.
+    <p>© 2025 Fasco - All rights reserved</p>
 </footer>
 
+<script src="script.js"></script>
 </body>
 </html>
